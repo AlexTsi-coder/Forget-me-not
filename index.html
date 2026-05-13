@@ -3755,11 +3755,11 @@ RESPONSIVE
 
     <section class="contact-section" id="contact">
 
-        <div class="contact-grid">
+        <div class="contact-grid reveal">
 
             <div class="contact-left">
 
-                <div class="section-header reveal">
+                <div class="section-header">
 
                     <span class="section-label">Begin the Conversation</span>
 
@@ -3785,7 +3785,7 @@ RESPONSIVE
 
                 </div>
 
-                <div class="contact-details reveal reveal-d1">
+                <div class="contact-details">
 
                     <div class="contact-detail">
 
@@ -3849,7 +3849,7 @@ RESPONSIVE
 
 
 
-            <div class="contact-form-wrap reveal">
+            <div class="contact-form-wrap">
 
                 <div class="form-title">Write to us</div>
 
@@ -4161,7 +4161,7 @@ RESPONSIVE
             const items = Array.from(portfolioGrid.children);
             const firstClone = items[0].cloneNode(true);
             const lastClone = items[items.length - 1].cloneNode(true);
-            
+
             portfolioGrid.insertBefore(lastClone, items[0]);
             portfolioGrid.appendChild(firstClone);
 
@@ -4211,13 +4211,13 @@ RESPONSIVE
 
             const stopAutoScroll = () => clearInterval(scrollInterval);
 
-            pPrev.addEventListener('click', (e) => { 
+            pPrev.addEventListener('click', (e) => {
                 e.preventDefault(); e.stopPropagation();
-                stopAutoScroll(); scroll(-1); startAutoScroll(); 
+                stopAutoScroll(); scroll(-1); startAutoScroll();
             });
-            pNext.addEventListener('click', (e) => { 
+            pNext.addEventListener('click', (e) => {
                 e.preventDefault(); e.stopPropagation();
-                stopAutoScroll(); scroll(1); startAutoScroll(); 
+                stopAutoScroll(); scroll(1); startAutoScroll();
             });
 
             portfolioGrid.addEventListener('touchstart', stopAutoScroll, { passive: true });
